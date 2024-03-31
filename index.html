@@ -21,10 +21,53 @@
     <p class="lead">A simple Kanban board for task management</p>
   </header>
   <div class="container">
+
+    <!-- Button to trigger modal -->
     <div class="text-center mb-5">
-      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
+      <button class="btn btn-success btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">Add
+        Task</button>
     </div>
+
     <!-- Todo: Create a modal with a form to add tasks -->
+    <!-- MODAL ADDED -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add a new task!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Added form below -->
+            <form id="myModal">
+              <div class="row">
+                <div class="col-lg-6">
+                  <label for="task">Task:</label>
+                  <input type="text" class="form-control" id="task">
+                </div>
+                <div class="col-lg-6">
+                  <label for="due-date">Due Date:</label>
+                  <input type="text" class="form-control" id="due-date">
+                </div>
+              </br>
+                <div class="col-lg-12">
+                  <label for="task-description">Task Description:</label>
+                  <textarea type="text" class="form-control" id="task-description"></textarea>
+                </div>
+              </div>
+            </form>
+            <!-- Added form above -->
+          </div>
+          <!-- Button to send task details to local storage below -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="myInput" type="button" class="btn btn-primary createTaskButton">Save changes</button>
+          </div>
+          <!-- Button to send task details to local storage above -->
+        </div>
+      </div>
+    </div>
+    <!-- MODAL ADDED -->
     <div class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
@@ -45,16 +88,16 @@
             <div id="in-progress-cards"></div>
           </div>
         </div>
+      </div>
+      <div class="col-12 col-lg-4 d-flex">
+        <div id="done" class="card border-light mb-3 lane flex-grow-1">
+          <div class="card-header bg-white">
+            <h2 class="card-title mb-1">Done</h2>
+          </div>
+          <div class="card-body bg-light">
+            <div id="done-cards"></div>
+          </div>
         </div>
-        <div class="col-12 col-lg-4 d-flex">
-          <div id="done" class="card border-light mb-3 lane flex-grow-1">
-            <div class="card-header bg-white">
-              <h2 class="card-title mb-1">Done</h2>
-            </div>
-            <div class="card-body bg-light">
-              <div id="done-cards"></div>
-          </div>
-          </div>
       </div>
     </div>
   </div>
