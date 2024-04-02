@@ -28,10 +28,12 @@ function renderTaskList() {
 function handleAddTask(event) {
   event.preventDefault();
 
+  // Selecting ID from html
   const task = $("#task");
   const duedate = $("#due-date");
   const description = $("#task-description");
 
+  // Object creation with values, new task ID, and todo status
   const newTask = {
     id: generateTaskId(),
     task: task.val(),
