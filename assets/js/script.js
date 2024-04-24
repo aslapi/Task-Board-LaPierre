@@ -105,27 +105,23 @@ function handleAddTask(event) {
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event) {
-  // event object passed in delete using task id taskList.remove
+  const deleteBtn = $(event.target);
+  deleteBtn.closest('.card-body').remove();
 }
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
-
+  $('.card-body').draggable({
+    snap: true,
+    snap: '.snap-target'
+  });
 }
 
 // Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(function () {
-  $("#myModal").on("submit", handleAddTask);
   renderTaskList();
-
-  // createTaskButton.on("click", handleAddTask);
-
+  handleDrop();
+  $("#myModal").on("submit", handleAddTask);
+  $('.delete-task').on('click', handleDeleteTask);
 });
-
-// const myModal = document.getElementById('myModal')
-// const myInput = document.getElementById('myInput')
-
-// myModal.addEventListener('shown.bs.modal', () => {
-//   myInput.focus()
-// })
 
