@@ -31,7 +31,7 @@ function createTaskCard(task) {
 
   const taskCard =
     `
-  <div class="card-body">
+  <div class="card-body drag">
     <h5 class="card-title">${task.task}</h5>
     <p class="card-text">${task.description}</p>
     <p class="card-text">Due Date: ${task.duedate}</p>
@@ -111,7 +111,7 @@ function handleDeleteTask(event) {
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
-  $('.card-body').draggable({
+  $('.drag').draggable({
     snap: true,
     snap: '.snap-target'
   });
