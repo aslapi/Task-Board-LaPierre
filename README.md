@@ -10,7 +10,7 @@ The purpose of this application is for users to be able to add tasks for a proje
 
 ## Installation
 
-There are no installation steps required for this project. Simply click the link provided:  or you can clone the repository titled Task-Board-LaPierre and launch the index.html file in your default browser.
+There are no installation steps required for this project. Simply click the link provided: https://aslapi.github.io/Task-Board-LaPierre/ or you can clone the repository titled Task-Board-LaPierre and launch the index.html file in your default browser.
 
 ## Usage
 
@@ -18,4 +18,4 @@ Once you've either clicked the link or cloned the repository and launched the in
 
 Attached is a screenshot of what the website should look like when visiting.
 
-![Alt text](./assets/images/webpage.png?raw=true "Webpage")
+![Front Page](./assets/images/webpage.png?raw=true "Webpage")
